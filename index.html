@@ -14,28 +14,40 @@
   <header>
     <h3>Aravindhakumar Dev</h3>
   </header>
-  <div class="your-class">
-    <div>your content</div>
-    <div>your content</div>
-    <div>your content</div>
+  <div class="container">
+    <div class="wrapper">
+      <div class="center-slider">
+        <div><img src="/assets/images/image1.png"></div>
+        <div><img src="/assets/images/image2.png"></div>
+        <div><img src="/assets/images/image3.png"></div>
+        <div><img src="/assets/images/image4.png"></div>
+        <div><img src="/assets/images/image5.png"></div>
+        <div><img src="/assets/images/image6.png"></div>
+        <div><img src="/assets/images/image7.png"></div>
+        <div><img src="/assets/images/image8.png"></div>
+      </div>
+    </div>
   </div>
 
+
+
   <script type="text/javascript" src="/assets/js/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="/assets/js/jquery-migrate-1.2.1.min.js"></script>
+  <!-- <script type="text/javascript" src="/assets/js/jquery-migrate-1.2.1.min.js"></script>  -->
   <script type="text/javascript" src="/assets/slick/slick.js"></script>
-  <script type="text/javascript" src="/assets/slick/slick.min.js"></script>
+  <!-- <script type="text/javascript" src="/assets/slick/slick.min.js"></script>  -->
 
   <script type="text/javascript">
     $(document).ready(function () {
-      $('.center').slick({
+      $('.center-slider').slick({
+        Infinity: true,
         centerMode: true,
-        centerPadding: '60px',
+        speed: 1500,
         slidesToShow: 3,
         responsive: [
           {
             breakpoint: 768,
             settings: {
-              arrows: false,
+              arrows: true,
               centerMode: true,
               centerPadding: '40px',
               slidesToShow: 3
@@ -44,7 +56,7 @@
           {
             breakpoint: 480,
             settings: {
-              arrows: false,
+              arrows: true,
               centerMode: true,
               centerPadding: '40px',
               slidesToShow: 1
