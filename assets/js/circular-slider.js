@@ -212,9 +212,6 @@
 
     ///////////Init sliders/////////// 
     window.circularSlider1 = new Slider(document.querySelector('.circular-slider-1'), 100, 15, 600, 2500);
-    window.circularSlider2 = new Slider(document.querySelector('.circular-slider-2'), 90, 13, 700, 3000);
-    window.circularSlider3 = new Slider(document.querySelector('.circular-slider-3'), 80, 18, 800, 3700);
-    window.circularSlider4 = new Slider(document.querySelector('.circular-slider-4'), 70, 20, 900, 4200);
 
     let sliders = [window.circularSlider1, window.circularSlider2, window.circularSlider3, window.circularSlider4];
 
