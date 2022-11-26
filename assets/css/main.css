@@ -1,9 +1,17 @@
 .slider {
-  width: 50%;
-  height: 50%;
+  width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 20px;
+  height: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .circular-slider {
@@ -24,6 +32,7 @@
 
 .circular-slider .wrapper {
   margin: 0 auto;
+  width: 95% !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,7 +131,6 @@
 
 .circular-slider .wrapper .slides-holder {
   border-radius: 50%;
-  border: 2px solid #8EB8E5;
   -webkit-transform-origin: center;
   -ms-transform-origin: center;
   transform-origin: center;
@@ -230,15 +238,4 @@
   overflow-y: hidden;
 }
 
-body {
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
+.slider {}
