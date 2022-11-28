@@ -27,8 +27,6 @@
 
         this.btnRight = newSlider.querySelector('.circular-slider .wrapper .controls .controls__right');
 
-        this.btnAutoplay = newSlider.querySelector('.circular-slider .wrapper .controls .controls__autoplay');
-
         this.currentAngle = 0;
 
         this.stepAngle = 2 * Math.PI / newSlider.querySelectorAll('.circular-slider .wrapper .slides-holder .slides-holder__item').length;
