@@ -66,10 +66,11 @@
     </section>
 
     <!-------------------------------- Carousal Slick ---------------------------->
+
     <div class="carousal">
-        <div>your content</div>
-        <div>your content</div>
-        <div>your content</div>
+        <div>your content 1</div>
+        <div>your content 2</div>
+        <div>your content 3</div>
     </div>
 
 
@@ -81,14 +82,20 @@
 
 
     <!--------------------------------------------------------------------------------->
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/assets/slick/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="/assets/slick/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="/assets/slick/slick.min.js"></script>
     <script src="/assets/js/circular-slider.js"></script>
     <script defer src="/assets/js/all.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('.carousal').slick();
+            $('.carousal').slick({
+                infinite: true,
+                speed: 300,
+                autoplay: true,
+                prevArrow: '<button class="slide-arrow prev-arrow"></button>',
+                nextArrow: '<button class="slide-arrow next-arrow"></button>'
+            });
         });
     </script>
 </body>
