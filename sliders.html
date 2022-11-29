@@ -121,25 +121,7 @@
 
         }
     </style>
-    <script>
-        jQuery(function ($) {
-            $.fn.hScroll = function (amount) {
-                amount = amount || 120;
-                $(this).bind("DOMMouseScroll mousewheel", function (event) {
-                    var oEvent = event.originalEvent,
-                        direction = oEvent.detail ? oEvent.detail * -amount : oEvent.wheelDelta,
-                        position = $(this).scrollLeft();
-                    position += direction > 0 ? -amount : amount;
-                    $(this).scrollLeft(position);
-                    event.preventDefault();
-                })
-            };
-        });
 
-        $(document).ready(function () {
-            $(' .scrolling-wrapper').hScroll(40);
-        });
-    </script>
     <div class="scrolling-wrapper">
         <div class="card">
             <h2>Best Selling</h2><a href="/index.html">Shop All </a>
@@ -219,7 +201,7 @@
             event.preventDefault();
 
             element.scrollBy({
-                left: event.deltaY < 0 ? -30 : 30,
+                left: event.deltaY < 0 ? -50 : 50,
 
             });
         });
