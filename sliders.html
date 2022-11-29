@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="stylesheet" type="text/css" href="/assets/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="/assets/slick/slick-theme.css" />
+
 </head>
 
 <body>
@@ -79,16 +80,260 @@
 
 
     <!--------------------------------------------------------------------------------->
+    <!----------------------------------- Products Horizontal Scrolling ------->
+    <style>
+        /*.scrolling-wrapper {
+            width: 300px;
+            height: 300px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            transform-origin: right top;
+            transform: rotate(-90deg) translateY(-100px);
+        }
+
+        .card {
+            transform: rotate(90deg);
+            width: 150px;
+            height: 150px;
+        }*/
 
 
+        .scrolling-wrapper {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+
+        }
+
+        .card {
+            display: inline-block;
+            padding: 50px;
+            color: #000;
+            background-color: aquamarine;
+            text-align: center;
+            vertical-align: middle;
+
+        }
+
+        .card img {
+            width: 250px;
+            height: 250px;
+
+        }
+    </style>
+    <script>
+        jQuery(function ($) {
+            $.fn.hScroll = function (amount) {
+                amount = amount || 120;
+                $(this).bind("DOMMouseScroll mousewheel", function (event) {
+                    var oEvent = event.originalEvent,
+                        direction = oEvent.detail ? oEvent.detail * -amount : oEvent.wheelDelta,
+                        position = $(this).scrollLeft();
+                    position += direction > 0 ? -amount : amount;
+                    $(this).scrollLeft(position);
+                    event.preventDefault();
+                })
+            };
+        });
+
+        $(document).ready(function () {
+            $(' .scrolling-wrapper').hScroll(40);
+        });
+    </script>
+    <div class="scrolling-wrapper">
+        <div class="card">
+            <h2>Best Selling</h2><a href="/index.html">Shop All </a>
+        </div>
+        <div class="card"><img src="/assets/images/image1.png" />
+            <h2>Card</h2><button><a href="/index.html">add to cart </a></button>
+        </div>
+        <div class="card"><img src="/assets/images/image1.png" />
+            <h2>Card</h2><button><a href="/index.html">add to cart </a></button>
+        </div>
+        <div class="card"><img src="/assets/images/image1.png" />
+            <h2>Card</h2><button><a href="/index.html">add to cart </a></button>
+        </div>
+        <div class="card"><img src="/assets/images/image1.png" />
+            <h2>Card</h2><button><a href="/index.html">add to cart </a></button>
+        </div>
+        <div class="card"><img src="/assets/images/image1.png" />
+            <h2>Card</h2><button><a href="/index.html">add to cart </a></button>
+        </div>
+        <div class="card"><img src="/assets/images/image1.png" />
+            <h2>Card</h2><button><a href="/index.html">add to cart </a></button>
+        </div>
+        <div class="card"><img src="/assets/images/image1.png" />
+            <h2>Card</h2><button><a href="/index.html">add to cart </a></button>
+        </div>
+        <div class="card"><img src="/assets/images/image1.png" />
+            <h2>Card</h2><button><a href="/index.html">add to cart </a></button>
+        </div>
+    </div>
+
+    ______________________________________________________________________________________________________________
+    <style>
+        #container {
+            display: flex;
+            overflow-x: scroll;
+            max-width: 50rem;
+            margin: 0 auto;
+        }
+
+        #container p {
+            font-family: sans-serif;
+            border-radius: 8px;
+            background: #ff6961;
+            color: white;
+            width: 300px;
+            height: 300px;
+            padding: 2rem 3rem;
+            margin: 2rem 1rem;
+        }
+    </style>
+    <div id="container">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>10</p>
+    </div>
+    <script>
+        const element = document.querySelector("#container");
+
+        element.addEventListener('wheel', (event) => {
+            event.preventDefault();
+
+            element.scrollBy({
+                left: event.deltaY < 0 ? -30 : 30,
+
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+    <div class="woocommerce columns-4 ">
+        <ul class="products columns-4">
+            <li
+                class="product type-product post-20 status-publish first instock product_cat-seeds has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                <a href="https://bleap.dev/astronut/index.php/product/sunflower-seeds/"
+                    class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324"
+                        src="https://bleap.dev/astronut/wp-content/uploads/2022/11/Sunflower-seeds-324x324.png"
+                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy"
+                        srcset="https://bleap.dev/astronut/wp-content/uploads/2022/11/Sunflower-seeds-324x324.png 324w, https://bleap.dev/astronut/wp-content/uploads/2022/11/Sunflower-seeds-100x100.png 100w, https://bleap.dev/astronut/wp-content/uploads/2022/11/Sunflower-seeds-300x300.png 300w, https://bleap.dev/astronut/wp-content/uploads/2022/11/Sunflower-seeds-150x150.png 150w, https://bleap.dev/astronut/wp-content/uploads/2022/11/Sunflower-seeds.png 400w"
+                        sizes="(max-width: 324px) 100vw, 324px">
+                    <h2 class="woocommerce-loop-product__title">Sunflower seeds</h2><span class="price"><span
+                            class="woocommerce-Price-amount amount"><bdi><span
+                                    class="woocommerce-Price-currencySymbol">$</span>450.00</bdi></span></span>
+                </a><a href="?add-to-cart=20" data-quantity="1"
+                    class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="20"
+                    data-product_sku="" aria-label="Add “Sunflower seeds” to your cart" rel="nofollow">Add to cart</a>
+            </li>
+            <li
+                class="product type-product post-24 status-publish instock product_cat-dry-fruits has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+                <a href="https://bleap.dev/astronut/index.php/product/black-raisins/"
+                    class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324"
+                        src="https://bleap.dev/astronut/wp-content/uploads/2022/11/Product-1-324x324.png"
+                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy"
+                        srcset="https://bleap.dev/astronut/wp-content/uploads/2022/11/Product-1-324x324.png 324w, https://bleap.dev/astronut/wp-content/uploads/2022/11/Product-1-100x100.png 100w, https://bleap.dev/astronut/wp-content/uploads/2022/11/Product-1-150x150.png 150w"
+                        sizes="(max-width: 324px) 100vw, 324px">
+                    <h2 class="woocommerce-loop-product__title">Black raisins</h2><span class="onsale">Sale
+                        !</span><span class="price"><del aria-hidden="true"><span
+                                class="woocommerce-Price-amount amount"><bdi><span
+                                        class="woocommerce-Price-currencySymbol">$</span>350.00</bdi></span></del><ins><span
+                                class="woocommerce-Price-amount amount"><bdi><span
+                                        class="woocommerce-Price-currencySymbol">$</span>300.00</bdi></span></ins></span>
+                </a><a href="?add-to-cart=24" data-quantity="1"
+                    class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="24"
+                    data-product_sku="" aria-label="Add “Black raisins” to your cart" rel="nofollow">Add to cart</a>
+            </li>
+            <li
+                class="product type-product post-25 status-publish instock product_cat-dry-fruits has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+                <a href="https://bleap.dev/astronut/index.php/product/dried-amala/"
+                    class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324"
+                        src="https://bleap.dev/astronut/wp-content/uploads/2022/11/Product-2-324x324.png"
+                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy"
+                        srcset="https://bleap.dev/astronut/wp-content/uploads/2022/11/Product-2-324x324.png 324w, https://bleap.dev/astronut/wp-content/uploads/2022/11/Product-2-100x100.png 100w, https://bleap.dev/astronut/wp-content/uploads/2022/11/Product-2-150x150.png 150w"
+                        sizes="(max-width: 324px) 100vw, 324px">
+                    <h2 class="woocommerce-loop-product__title">Dried amala</h2><span class="onsale">Sale !</span><span
+                        class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi><span
+                                        class="woocommerce-Price-currencySymbol">$</span>350.00</bdi></span></del><ins><span
+                                class="woocommerce-Price-amount amount"><bdi><span
+                                        class="woocommerce-Price-currencySymbol">$</span>199.00</bdi></span></ins></span>
+                </a><a href="?add-to-cart=25" data-quantity="1"
+                    class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="25"
+                    data-product_sku="" aria-label="Add “Dried amala” to your cart" rel="nofollow">Add to cart</a>
+            </li>
+            <li
+                class="product type-product post-26 status-publish last instock product_cat-dry-fruits has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+                <a href="https://bleap.dev/astronut/index.php/product/almonds/"
+                    class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324"
+                        src="https://bleap.dev/astronut/wp-content/uploads/2022/11/Product-3-324x324.png"
+                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy"
+                        srcset="https://bleap.dev/astronut/wp-content/uploads/2022/11/Product-3-324x324.png 324w, https://bleap.dev/astronut/wp-content/uploads/2022/11/Product-3-100x100.png 100w, https://bleap.dev/astronut/wp-content/uploads/2022/11/Product-3-150x150.png 150w"
+                        sizes="(max-width: 324px) 100vw, 324px">
+                    <h2 class="woocommerce-loop-product__title">Almonds</h2><span class="onsale">Sale !</span><span
+                        class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi><span
+                                        class="woocommerce-Price-currencySymbol">$</span>350.00</bdi></span></del><ins><span
+                                class="woocommerce-Price-amount amount"><bdi><span
+                                        class="woocommerce-Price-currencySymbol">$</span>250.00</bdi></span></ins></span>
+                </a><a href="?add-to-cart=26" data-quantity="1"
+                    class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="26"
+                    data-product_sku="" aria-label="Add “Almonds” to your cart" rel="nofollow">Add to cart</a>
+            </li>
+            <li
+                class="product type-product post-189 status-publish first instock product_cat-dates has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+                <a href="https://bleap.dev/astronut/index.php/product/dates/"
+                    class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324"
+                        src="https://bleap.dev/astronut/wp-content/uploads/2022/11/Dates-324x324.png"
+                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy"
+                        srcset="https://bleap.dev/astronut/wp-content/uploads/2022/11/Dates-324x324.png 324w, https://bleap.dev/astronut/wp-content/uploads/2022/11/Dates-300x300.png 300w, https://bleap.dev/astronut/wp-content/uploads/2022/11/Dates-150x150.png 150w, https://bleap.dev/astronut/wp-content/uploads/2022/11/Dates-416x416.png 416w, https://bleap.dev/astronut/wp-content/uploads/2022/11/Dates-100x100.png 100w, https://bleap.dev/astronut/wp-content/uploads/2022/11/Dates.png 500w"
+                        sizes="(max-width: 324px) 100vw, 324px">
+                    <h2 class="woocommerce-loop-product__title">Dates</h2><span class="onsale">Sale !</span><span
+                        class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi><span
+                                        class="woocommerce-Price-currencySymbol">$</span>500.00</bdi></span></del><ins><span
+                                class="woocommerce-Price-amount amount"><bdi><span
+                                        class="woocommerce-Price-currencySymbol">$</span>425.00</bdi></span></ins></span>
+                </a><a href="?add-to-cart=189" data-quantity="1"
+                    class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="189"
+                    data-product_sku="" aria-label="Add “Dates” to your cart" rel="nofollow">Add to cart</a>
+            </li>
+            <li
+                class="product type-product post-193 status-publish instock product_cat-nuts has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+                <a href="https://bleap.dev/astronut/index.php/product/walnut/"
+                    class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324"
+                        src="https://bleap.dev/astronut/wp-content/uploads/2022/11/Walnut-324x324.png"
+                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy"
+                        srcset="https://bleap.dev/astronut/wp-content/uploads/2022/11/Walnut-324x324.png 324w, https://bleap.dev/astronut/wp-content/uploads/2022/11/Walnut-300x300.png 300w, https://bleap.dev/astronut/wp-content/uploads/2022/11/Walnut-150x150.png 150w, https://bleap.dev/astronut/wp-content/uploads/2022/11/Walnut-416x416.png 416w, https://bleap.dev/astronut/wp-content/uploads/2022/11/Walnut-100x100.png 100w, https://bleap.dev/astronut/wp-content/uploads/2022/11/Walnut.png 500w"
+                        sizes="(max-width: 324px) 100vw, 324px">
+                    <h2 class="woocommerce-loop-product__title">Walnut</h2><span class="onsale">Sale !</span><span
+                        class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi><span
+                                        class="woocommerce-Price-currencySymbol">$</span>999.00</bdi></span></del><ins><span
+                                class="woocommerce-Price-amount amount"><bdi><span
+                                        class="woocommerce-Price-currencySymbol">$</span>599.00</bdi></span></ins></span>
+                </a><a href="?add-to-cart=193" data-quantity="1"
+                    class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="193"
+                    data-product_sku="" aria-label="Add “Walnut” to your cart" rel="nofollow">Add to cart</a>
+            </li>
+        </ul>
+    </div>
     <!--------------------------------------------------------------------------------->
     <script type="text/javascript" src="/assets/slick/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="/assets/slick/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="/assets/slick/slick.min.js"></script>
     <script src="/assets/js/circular-slider.js"></script>
     <script defer src="/assets/js/all.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
+
+    <script type="text/javascript">$(document).ready(function () {
             $('.testimonial-items').slick({
                 infinite: true,
                 speed: 300,
