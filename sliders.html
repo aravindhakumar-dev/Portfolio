@@ -82,59 +82,52 @@
     <!--------------------------------------------------------------------------------->
     <!----------------------------------- Products Horizontal Scrolling ------->
     <style>
-        .scrolling-wrapper {
-            overflow-x: scroll;
-            overflow-y: hidden;
-            white-space: nowrap;
-
+        .horizontal {
+            overflow-x: hidden;
+            display: flex;
         }
 
-        .card {
-            display: inline-block;
-            padding: 50px;
-            color: #000;
-            background-color: aquamarine;
-            text-align: center;
-            vertical-align: middle;
-
+        h1 {
+            margin: 0;
+            padding: 0;
         }
 
-        .card img {
-            width: 250px;
-            height: 250px;
+        section {
+            min-width: 50vw;
+            min-height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4ch;
+        }
 
+        section:nth-child(even) {
+            background-color: teal;
+            color: white;
         }
     </style>
-
-    <div class="scrolling-wrapper">
-        <div class="card">
-            <h2>Best Selling</h2><a href="/index.html">Shop All </a>
-        </div>
-        <div class="card"><img src="/assets/images/image1.png" />
-            <h2>Card</h2><button><a href="/index.html">add to cart </a></button>
-        </div>
-        <div class="card"><img src="/assets/images/image1.png" />
-            <h2>Card</h2><button><a href="/index.html">add to cart </a></button>
-        </div>
-        <div class="card"><img src="/assets/images/image1.png" />
-            <h2>Card</h2><button><a href="/index.html">add to cart </a></button>
-        </div>
-        <div class="card"><img src="/assets/images/image1.png" />
-            <h2>Card</h2><button><a href="/index.html">add to cart </a></button>
-        </div>
-        <div class="card"><img src="/assets/images/image1.png" />
-            <h2>Card</h2><button><a href="/index.html">add to cart </a></button>
-        </div>
-        <div class="card"><img src="/assets/images/image1.png" />
-            <h2>Card</h2><button><a href="/index.html">add to cart </a></button>
-        </div>
-        <div class="card"><img src="/assets/images/image1.png" />
-            <h2>Card</h2><button><a href="/index.html">add to cart </a></button>
-        </div>
-        <div class="card"><img src="/assets/images/image1.png" />
-            <h2>Card</h2><button><a href="/index.html">add to cart </a></button>
-        </div>
+    <div class="horizontal">
+        <section>
+            <h1>Beep</h1>
+        </section>
+        <section>
+            <h1>Boop</h1>
+        </section>
+        <section>
+            <h1>Boooom</h1>
+        </section>
+        <section>
+            <h1>The End</h1>
+        </section>
     </div>
+    <script>
+        const scrollContainer = document.querySelector(".horizontal");
+
+        scrollContainer.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            scrollContainer.scrollLeft += evt.deltaY;
+        });
+    </script>
 
     ______________________________________________________________________________________________________________
     <style>
@@ -274,7 +267,8 @@
                                             class="woocommerce-Price-currencySymbol">$</span>300.00</bdi></span></ins></span>
                     </a><a href="?add-to-cart=24" data-quantity="1"
                         class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="24"
-                        data-product_sku="" aria-label="Add “Black raisins” to your cart" rel="nofollow">Add to cart</a>
+                        data-product_sku="" aria-label="Add “Black raisins” to your cart" rel="nofollow">Add to
+                        cart</a>
                 </li>
                 <li
                     class="product type-product post-25 status-publish instock product_cat-dry-fruits has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
@@ -295,7 +289,8 @@
                                             class="woocommerce-Price-currencySymbol">$</span>199.00</bdi></span></ins></span>
                     </a><a href="?add-to-cart=25" data-quantity="1"
                         class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="25"
-                        data-product_sku="" aria-label="Add “Dried amala” to your cart" rel="nofollow">Add to cart</a>
+                        data-product_sku="" aria-label="Add “Dried amala” to your cart" rel="nofollow">Add to
+                        cart</a>
                 </li>
                 <li
                     class="product type-product post-26 status-publish last instock product_cat-dry-fruits has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
